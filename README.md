@@ -2,7 +2,8 @@
 
 <img src="https://raw.githubusercontent.com/Josemar-cafumana/desafio-dev-fullstack/main/public/assets/img/Interface%20Home.png"> 
 
-<img src=https://raw.githubusercontent.com/Josemar-cafumana/desafio-dev-fullstack/main/public/assets/img/Interface%20Importar%20.png"> 
+
+<img src="https://raw.githubusercontent.com/Josemar-cafumana/desafio-dev-fullstack/main/public/assets/img/Interface%20Importar%20.png"> 
 
 # Setup
 
