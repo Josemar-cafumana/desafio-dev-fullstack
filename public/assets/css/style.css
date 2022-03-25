@@ -175,10 +175,16 @@ main .transacao .transacao-body .box {
   margin: 1rem 0;
 }
 
+#message {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
 .card {
   width: 30rem;
   background: #fff;
-  height: 22rem;
+  height: 25rem;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -205,6 +211,10 @@ main .transacao .transacao-body .box {
   text-align: end;
 }
 
+.card form button {
+  margin-top: 1.4rem !important;
+}
+
 .card form .file {
   width: 100%;
   height: 60%;
@@ -219,7 +229,7 @@ main .transacao .transacao-body .box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .card form .file i {

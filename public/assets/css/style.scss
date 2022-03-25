@@ -168,11 +168,16 @@ main{
 
 
 
+#message {
+    color:red;
+    font-weight:bold;
 
+   display: none;
+}
 .card{
     width: 30rem;
     background:  #fff;
-    height: 22rem;
+    height: 25rem;
     position: absolute;
     top: 60%;
     left:50%;
@@ -194,6 +199,10 @@ main{
         height: 100%;
         text-align: end;
 
+        button{
+            margin-top: 1.4rem !important;
+        }
+
         .file{
             width:100%;
             height:60%;
@@ -202,7 +211,7 @@ main{
             display:flex;
             align-items:center;
             justify-content: center;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             
             i{
     

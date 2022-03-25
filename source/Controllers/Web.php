@@ -12,6 +12,7 @@ class Web
 {
     private $view;
     private $conn;
+    public $feedback;
 
     public function __construct($router)
     {
@@ -52,8 +53,14 @@ class Web
     }
     public function store($data)
     {
-
         $arquivo = new File("public", "arquivos");
+        if(empty($_FILES['arquivo']) || !in_array($_FILES['arquivo']['type'], $arquivo::isAllowed())){
+            
+            $this->feedback['sucesso'] = false;
+            echo json_encode($this->feedback);
+            return;
+        }
+       
   
          $upload = $arquivo->upload($_FILES['arquivo'],$_FILES['arquivo']['name']);
          $file = file(ROOT."/".$upload);
@@ -76,8 +83,9 @@ class Web
             $stmt= $this->conn->prepare($sql);
             $stmt->execute([$tipo,$data,$valor,$bi,$cartao,$hora,$donoLoja,$nomeLoja]);
          }
-       
-         return true;
+
+         $this->feedback['sucesso'] = true;
+         echo json_encode($this->feedback);
     }
 
 

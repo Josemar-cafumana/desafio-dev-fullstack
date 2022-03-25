@@ -54,17 +54,4 @@
      
     
  
-    <?php $v->start('scripts'); ?>
-        const add_transacao = document.querySelector('#add_transacao');
-        const overlay = document.querySelector('.overlay');
-        const card = document.querySelector('.card');
-
-
-        add_transacao.onclick = () => {
-            card.classList.toggle('active')
-            overlay.classList.toggle('active')
-        }
-
   
-
-<?php $v->end(); ?>

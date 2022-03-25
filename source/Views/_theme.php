@@ -24,7 +24,7 @@
     </main>   
 
 
-    <?= $v->section('card'); ?>
+
     
 
     <script>
