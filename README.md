@@ -7,16 +7,16 @@
 
 # Setup
 
-1. Primeiro, faça a configuracao da conexão da base de dados e mudar as variaveis de ROOT.
+1. Primeiro, faça a configuracao da conexão da base de dados e mudar as variaveis de ROOT em [Config.php)](https://github.com/Josemar-cafumana/desafio-dev-fullstack/blob/main/source/Config.php) .
 2. Em seguida, Importar o arquivo sql para a criação e insercao de dados constantes.
 
 
 
 # Rotas 
 
-$router->get("/", "Web:home", "web.home");
-$router->get("/importar", "Web:importar", "web.importar");
-$router->post("/create", "Web:store", "web.store");
+$router->get("/", "Web:home", "web.home"); \
+$router->get("/importar", "Web:importar", "web.importar"); \
+$router->post("/create", "Web:store", "web.store"); \
 
 
 
