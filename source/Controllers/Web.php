@@ -24,12 +24,15 @@ class Web
     public function home()
     {
       
-        $t =  $this->conn->query('SELECT *  FROM transacaos INNER JOIN tipos ON transacaos.tipo_id = tipos.id;  ')->fetchAll();
+        $transacoes =  $this->conn->query('SELECT *  FROM transacaos 
+                                                                INNER JOIN tipos 
+                                                                ON transacaos.tipo_id = tipos.id;  ')
+                                                                ->fetchAll();
      
 
         echo $this->view->render('home',[
             "title" => 'Home',
-            'transacaos' =>$t
+            'transacaos' =>$transacoes
         ]);
     }
     public function importar()
@@ -40,15 +43,24 @@ class Web
         
         ]);
     }
-    public function loja($data)
+    public function loja()
     {
 
-        $loja =   $data['loja'];
+        
+        $transacoes =  $this->conn->query('SELECT t.nomeLoja,t.donoLoja, sum(t.valor) as Saldo  
+        FROM transacaos as t   
+        INNER JOIN tipos    
+        ON t.tipo_id = tipos.id
+        
+        where natureza ="Entrada"
+        group by t.nomeLoja
+           ')->fetchAll();
+ 
 
  
-        echo $this->view->render('import',[
-            "title" => 'Importar Arquivos',
-        
+        echo $this->view->render('lojas',[
+            "title" => 'Lojas',
+            'transacaos' =>$transacoes
         ]);
     }
     public function store($data)

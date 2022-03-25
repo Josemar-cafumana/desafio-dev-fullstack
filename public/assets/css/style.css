@@ -40,20 +40,10 @@
   cursor: pointer;
 }
 
-.overlay {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  pointer-events: auto;
-  display: nones;
-}
-
-.overlay.active {
-  display: block;
+#message {
+  color: red;
+  font-weight: bold;
+  display: none;
 }
 
 header {
@@ -107,7 +97,7 @@ main {
 }
 
 main .transacao h3 {
-  color: #283048 !important;
+  color: var(--primary) !important;
 }
 
 main .transacao .table {
@@ -173,12 +163,6 @@ main .transacao .transacao-body .box {
   min-height: 5rem;
   border-radius: 5px;
   margin: 1rem 0;
-}
-
-#message {
-  color: red;
-  font-weight: bold;
-  display: none;
 }
 
 .card {

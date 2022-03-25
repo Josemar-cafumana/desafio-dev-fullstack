@@ -15,6 +15,7 @@
 
             <ul>
                 <li><a href="<?= url('') ?>">Home</a></li>
+                <li><a href="<?= url('/transacao/lojas') ?>">Lojas</a></li>
                 <li><a href="<?= url('/importar') ?>">Importar  </a></li>
             </ul>
         </nav>
