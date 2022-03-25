@@ -24,8 +24,9 @@
       form.addEventListener('submit', function(e){
 
           e.preventDefault()
+          var url = form.getAttribute("action")
 
-          fetch("http://localhost/Kaila/desafio-dev-fullstack/create", {
+          fetch(url, {
                     body: new FormData(form),
                     method: "post",
    
