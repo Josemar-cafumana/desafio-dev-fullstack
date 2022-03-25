@@ -1,0 +1,24 @@
+{
+    "name": "josemar-cafumana/kaila",
+    "description": "Desafio fullstack da kaila",
+    "authors": [
+        {
+            "name": "Josemar Cafumana",
+            "email": "josemarcafumana890@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require": {
+        "coffeecode/datalayer": "^1.1",
+        "coffeecode/router": "1.0.*",
+        "coffeecode/uploader": "1.0.*",
+        "league/plates": "v4.0.0-alpha"
+    }
+}
